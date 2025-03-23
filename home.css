@@ -1,0 +1,774 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Top Bar */
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: white;
+}
+
+.top-bar1 {
+    width: 70%;
+    background-color: #b8c8eb;
+    display: flex;
+    justify-content: flex-end;
+    border-radius: 50px 0px 0px 50px;
+}
+
+.top-bar2 {
+    width: 50%;
+    background-color: #004fff;
+    padding: 10px 20px;
+    border-radius: 50px 0px 0px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.top-bar-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    flex-wrap: wrap;
+}
+
+.top-bar-content span {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+.download-brochure {
+    color: white;
+    padding: 5px 12px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.download-brochure:hover {
+    background-color: #f0f0f0;
+}
+
+/* Navigation Bar */
+.main-nav {
+    background-color: white;
+    padding: 15px 5%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 50px;
+    max-width: 100%;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.nav-links li {
+    margin-left: 20px;
+    position: relative;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    padding-bottom: 5px;
+    font-size: 16px;
+}
+
+.nav-links li a:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #007bff;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links li a:hover:before {
+    width: 100%;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    border-radius: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: background 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-buttons img {
+    height: 40px;
+    max-width: 100%;
+}
+
+#Enquiry_button {
+    padding: 10px 18px;
+    background-color: #ebebeb;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.whatsapp-helpline {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.whatsapp-logo {
+    width: 30px;
+    height: 30px;
+}
+
+.title {
+    font-size: 14px;
+    font-weight: normal;
+    color: #000;
+    margin: 0;
+}
+
+.number {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    margin: 0;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* PVC Banner Section */
+.pvc-banner {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background: url(/assets/banner.png) no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    flex-direction: column;
+}
+
+.pvc-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.pvc-banner-content {
+    position: relative;
+    z-index: 1;
+}
+
+.pvc-banner-title {
+    font-size: clamp(24px, 5vw, 40px);
+    font-weight: bold;
+}
+
+.pvc-banner-subtext {
+    font-size: clamp(14px, 3vw, 18px);
+}
+
+.pvc-banner-bottom-bar {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    justify-content: center;
+    color: white;
+    font-size: clamp(12px, 2vw, 14px);
+}
+
+.kk {
+    cursor: pointer;
+    position: relative;
+    padding: 10px;
+    background: linear-gradient(to top, white 0%, rgba(255, 255, 255, 0) 100%);
+    flex: 1 1 100px;
+    text-align: center;
+}
+
+.kk:hover {
+    background: linear-gradient(to top, blue 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.pvc-banner-info-card {
+    display: none;
+    position: absolute;
+    z-index: 999;
+    background: white;
+    padding: 15px;
+    border-radius: 20px 0px 20px 0px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    top: -220px;
+    left: 0;
+}
+
+.pvc-banner-itemone:hover .pvc-banner-info-card,
+.pvc-banner-itemtwo:hover .pvc-banner-info-card,
+.pvc-banner-itemthree:hover .pvc-banner-info-card,
+.pvc-banner-itemfour:hover .pvc-banner-info-card,
+.pvc-banner-itemfive:hover .pvc-banner-info-card,
+.pvc-banner-itemsix:hover .pvc-banner-info-card,
+.pvc-banner-itemseven:hover .pvc-banner-info-card,
+.pvc-banner-itemeight:hover .pvc-banner-info-card,
+.pvc-banner-itemnine:hover .pvc-banner-info-card {
+    display: flex;
+}
+
+.pvc-banner-info-img {
+    width: 100%;
+    height: auto;
+    max-height: 100px;
+}
+
+.pvc-banner-info-text {
+    text-align: left;
+}
+
+.pvc-banner-info-title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+}
+
+.pvc-banner-info-description {
+    font-size: 12px;
+    color: gray;
+    margin: 5px 0 0;
+}
+
+.pvc-banner-contact-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    background: yellow;
+    padding: 20px;
+    border-radius: 50%;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+}
+
+/* Section One */
+.section_one {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.image-container img,
+.years img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.content {
+    text-align: left;
+    max-width: 450px;
+    flex: 1 1 300px;
+}
+
+h1 {
+    font-size: clamp(20px, 4vw, 26px);
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.bold-text {
+    font-size: clamp(16px, 3vw, 18px);
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.description {
+    font-size: clamp(12px, 2.5vw, 14px);
+    color: #555;
+    line-height: 1.5;
+}
+
+.explore-link {
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: red;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.years {
+    text-align: center;
+    max-width: 300px;
+    flex: 1 1 250px;
+}
+
+.highlight-text {
+    font-size: clamp(16px, 3vw, 18px);
+    color: red;
+    font-weight: bold;
+}
+
+.since-btn {
+    background-color: #0057FF;
+    color: white;
+    border: none;
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+/* Second Section */
+.second-section {
+    color: #fff;
+    padding: 20px;
+}
+
+.second-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-image: url("assets/WhatsApp Image 2025-03-21 at 23.31.09_73db012d.jpg");
+    background-size: cover;
+    padding: 20px;
+    border-radius: 40px;
+}
+
+.second-container h1 {
+    font-size: clamp(24px, 5vw, 48px);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.second-container h3 {
+    font-size: clamp(18px, 4vw, 25px);
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.second-container .subtitle {
+    width: 90%;
+    margin: 0 auto;
+    font-size: clamp(14px, 2.5vw, 16px);
+    color: #d3d3d3;
+    margin-bottom: 20px;
+}
+
+.swiper-slide .card {
+    background: #2a5298;
+    border-radius: 0px 40px 15px 15px;
+    padding: 70px 20px 20px 20px;
+    text-align: center;
+    width: 85%;
+    max-width: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    margin-bottom: 60px;
+}
+.swiper-slide h3{
+    font-size: 20px;
+}
+.swiper-slide .icon img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+/* Section Three */
+.section-three {
+    position: relative;
+    width: 100%;
+    background: url('/assets/Group 12896.png') no-repeat center center/cover;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* padding: 5vw; */
+    gap: 20px;
+    color: white;
+}
+
+.section-three-content {
+    max-width: 500px;
+    flex: 1 1 300px;
+    padding-block: 260px;
+}
+
+.section-three-content h1 {
+    font-size: clamp(24px, 5vw, 50px);
+}
+
+.map-container {
+    max-width: 450px;
+    flex: 1 1 300px;
+}
+
+.map {
+    width: 100%;
+    height: auto;
+}
+
+/* Section Four */
+.counter-container {
+    padding: 50px 20px;
+    background-image: url('./assets/Group 12897.png');
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.counter-box-wraper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.counter-box {
+    background: rgba(5, 1, 1, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 200px;
+    flex: 1 1 200px;
+}
+
+.counter-box_p {
+    font-size: clamp(24px, 5vw, 45px);
+    color: rgb(154, 177, 232);
+    text-align: center;
+}
+
+
+
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin-bottom: 20px;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    background-color: #000;
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, 0.247);
+    text-align: center;
+    padding: 20px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.social-icons .logo {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons .logo img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+.explore-more {
+    display: flex;
+    align-items: center;
+}
+
+.explore-more a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.explore-more img {
+    width: 20px;
+    margin-left: 5px;
+}
+
+.bottom-bar {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .top-bar1 {
+        width: 80%;
+    }
+    .top-bar2 {
+        width: 60%;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0px;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .hamburger {
+        display: block;
+    }
+    .close-dropdown {
+        
+       display: block;
+    }
+    .nav-buttons {
+        margin-top: 20px;
+    }
+    .pvc-banner {
+        height: 70vh;
+    }
+    .pvc-banner-bottom-bar {
+        flex-direction: row;
+        align-items: center;
+    }
+    .section_one {
+        flex-direction: column;
+        text-align: center;
+    }
+    .content {
+        padding-right: 0;
+    }
+    .section-three {
+        gap: 50px;
+    }
+    .section-three-content {
+        max-width: 500px;
+        flex: 1 1 300px;
+        padding-block: 250px;
+    }
+    .footer-section {
+        flex-basis: 45%; /* Two columns on larger tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar1 {
+        width: 100%;
+        border-radius: 0;
+    }
+    .top-bar2 {
+        width: 100%;
+        border-radius: 0;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .top-bar-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .pvc-banner-info-card {
+        width: 150px;
+        top: -180px;
+    }
+    .mobile-close {
+        position: absolute;
+        top: 100px;
+        right: 30px;
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        color: red; /* Adjust as needed */
+        z-index: 1001; /* Ensure it's on top */
+    }
+    .swiper-slide .card {
+        width: 100%;
+    }
+    
+    .counter-box {
+        min-width: 150px;
+    }
+    .section-three-content {
+        max-width: 500px;
+        flex: 1 1 300px;
+        padding-block: 0px;
+    }
+    
+    .footer-section {
+        flex-basis: 100%; /* Single column on smaller tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        height: 40px;
+    }
+    .nav-buttons img {
+        height: 30px;
+    }
+    .whatsapp-logo {
+        width: 25px;
+        height: 25px;
+    }
+    .pvc-banner {
+        height: 50vh;
+    }
+    .pvc-banner-title {
+        font-size: 20px;
+    }
+    .pvc-banner-subtext {
+        font-size: 12px;
+    }
+    .pvc-banner-contact-icon {
+        padding: 15px;
+        font-size: 14px;
+    }
+    .mobile-close {
+        position: absolute;
+        top: 100px;
+        right: 30px;
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        color: red; /* Adjust as needed */
+        z-index: 1001; /* Ensure it's on top */
+    }
+    .counter-box_p {
+        font-size: 20px;
+    }
+    .footer {
+        padding: 20px 10px; /* Reduced padding for smaller screens */
+    }
+
+    .footer-section {
+        text-align: center; /* Center align text on small screens */
+    }
+
+    .logo {
+        justify-content: center; /* Center logo on small screens */
+    }
+    .section-three-content {
+        max-width: 500px;
+        flex: 1 1 300px;
+        padding-block: 0px;
+    }
+
+    .social-icons {
+        text-align: center; /* Center social icons on small screens */
+    }
+}
