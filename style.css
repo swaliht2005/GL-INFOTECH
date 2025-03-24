@@ -271,6 +271,7 @@ body {
     width: 200px;
     top: -220px;
     left: 0;
+
 }
 
 .pvc-banner-itemone:hover .pvc-banner-info-card,
@@ -283,6 +284,8 @@ body {
 .pvc-banner-itemeight:hover .pvc-banner-info-card,
 .pvc-banner-itemnine:hover .pvc-banner-info-card {
     display: flex;
+    
+    flex-direction: column;
 }
 
 .pvc-banner-info-img {
@@ -683,6 +686,7 @@ h1 {
     .pvc-banner-info-card {
         width: 150px;
         top: -180px;
+       
     }
     .mobile-close {
         position: absolute;
